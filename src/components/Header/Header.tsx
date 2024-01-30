@@ -38,15 +38,8 @@ export default function Header(props: HeaderProps) {
                         <LogoImage />
                     </Link>
             }
-            {
-                isCartPage
-                    ?
-                    <CartWithNumber />
-                    :
-                    <Link href="/cart">
-                        <CartWithNumber />
-                    </Link>
-            }
+
+            <CartWithNumber disabledNotification={!isCartPage} />
         </Grid>
     )
 }
